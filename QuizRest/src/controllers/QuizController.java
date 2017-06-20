@@ -81,11 +81,17 @@ public class QuizController {
 	 }
 	
 	@RequestMapping(path="quizzes/questions/{id}", method=RequestMethod.GET)
-	 public Set<Question> showQuestions(int id){
+	 public Set<Question> showQuestions(@PathVariable int id){
 		 return dao.showQuestions(id);
 	 }
 	
-	// public Question createQuestions(int id, String questionJson,
-	// HttpServletResponse res);
-	// public boolean destroyQuestions(int id, int questid);
+	 public Question createQuestions(int id, String questionJson, HttpServletResponse res){
+		 
+		 return null;
+	 }
+	 @RequestMapping(path="quizzes/questions/{id}", method=RequestMethod.DELETE)
+	 public boolean destroyQuestions(@PathVariable int questid){
+		 dao.destroyQuestion(0, questid);
+		 return false;
+	 }
 }
