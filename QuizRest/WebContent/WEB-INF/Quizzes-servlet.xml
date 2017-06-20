@@ -12,8 +12,8 @@
 	<context:component-scan base-package="controllers"/>
 	
 	
-	<!-- <bean id="addressdao" class=""/>
-	<bean id="filmsdao" class="" /> -->
+	<bean id="addressdao" class="data.QuizDAOImpl"/>
+	<!-- <bean id="filmsdao" class="" /> -->
 	
 	<bean id="myEntityManagerFactory"
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
